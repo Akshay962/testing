@@ -1,5 +1,5 @@
 import logging
-from plugins.shortzy import shortzy
+from plugins.shortzy import Shortzy
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from info import LONG_DROPLINK_URL, SHORTENER_API, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
 from imdb import IMDb
@@ -360,7 +360,7 @@ def humanbytes(size):
 
 #link converter 
 
-shortz = shortzy(SHORTENER_API, "shareus.in")
+shortzy = Shortzy(SHORTENER_API, "shareus.in")
 async def get_shortlink(link):
     if SHORTENER_API:
         if LONG_DROPLINK_URL == "True" or LONG_DROPLINK_URL is True:
