@@ -1574,4 +1574,4 @@ for keyword in reversed(sorted(keywords, key=len)):
                     logger.exception(e)
                 break
     else:
-        return False
+        return Fals
