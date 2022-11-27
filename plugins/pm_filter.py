@@ -135,32 +135,8 @@ async def pm_next_page(bot, query):
     if not files:
         return
     
-    settings = await get_settings(query.message.chat.id)
-    nxxreq  = query.from_user.id if query.from_user else 0
-    if settings['button']:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
-                ),
-            ]
-            for file in files
-        ]
-    else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'files#{nxxreq}#{file.file_id}'
-                ),
-                InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
-                ),
-            ]
-            for file in files
-        ]
-
-
+    btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+                
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -221,7 +197,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -234,7 +210,7 @@ async def next_page(bot, query):
                 ),
                 InlineKeyboardButton(
                     text=f"{get_size(file.file_size)}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
+                    callback_data=f'files#{nxreq}#{file.file_id}',
                 ),
             ]
             for file in files
@@ -1298,7 +1274,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1308,11 +1284,11 @@ async def auto_filter(client, msg, spoll=False):
             [
                 InlineKeyboardButton(
                     text=f"{file.file_name}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
                     text=f"{get_size(file.file_size)}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
+                    callback_data=f'{pre}#{req}#{file.file_id}',
                 ),
             ]
             for file in files
@@ -1410,28 +1386,10 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         search, files, offset, total_results = pmspoll
     pre = 'pmfilep' if PROTECT_CONTENT else 'pmfile'
     if SINGLE_BUTTON:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
-                ),
-            ]
-            for file in files
-        ]
+        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}')] for file in files]
     else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{file.file_name}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
-                ),
-                InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
-                ),
-            ]
-            for file in files
-        ]             
+        btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}',),
+              InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}_#{file.file_id}')] for file in files ]             
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         PM_BUTTONS[key] = search
