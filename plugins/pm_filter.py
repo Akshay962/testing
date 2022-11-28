@@ -184,7 +184,7 @@ async def pm_next_page(bot, query):
             ],
         )
     btn.insert(0, [
-        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
     ])
     try:
         await query.edit_message_reply_markup(
@@ -267,7 +267,7 @@ async def next_page(bot, query):
             ],
         )
     btn.insert(0, [
-        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
     ])
     try:
         await query.edit_message_reply_markup(
@@ -853,10 +853,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/mkn_bots_updates")
-            ],[
-            InlineKeyboardButton("🎥 ᴍᴏᴠɪᴇ ᴜᴘᴅᴀᴛᴇs", url="https://t.me/MR_LINK_Z")
+            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", url="https://t.me/iPapGroup"), 
+            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/iPapkornOfficial")
             ],[      
             InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
@@ -1336,7 +1334,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )   
     btn.insert(0, [
-        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
     ])
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -1457,7 +1455,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )   
     btn.insert(0, [
-        InlineKeyboardButton('How To Open', url='https://youtu.be/cTVJuad-hMU')
+        InlineKeyboardButton('𝐇𝐎𝐖 𝐓𝐎 𝐎𝐏𝐄𝐍 𝐋𝐈𝐍𝐊', url='https://youtu.be/cTVJuad-hMU')
     ])
     imdb = await get_poster(search) if IMDB else None
     TEMPLATE = IMDB_TEMPLATE
@@ -1496,7 +1494,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n\n<b>👥 Requested by: {message.from_user.mention}</b>\n<b>© Powered by: <a href='https://t.me/+y53tWFUw6Q43NzE9'>{message.chat.title}</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 5 minutes to avoid copyright issues.</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n\n<b>👥 Requested by: {message.from_user.mention}</b>\n<b>© Powered by: <a href='https://t.me/iPapkornOfficial'>{message.chat.title}</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 5 minutes to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
