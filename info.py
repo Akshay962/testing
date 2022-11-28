@@ -26,7 +26,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS' ,'https://telegra.ph/file/2e2a07e86066538ed7406.jpg')).split()
+PICS = (environ.get('PICS' ,'https://graph.org/file/d2c20ed467fd8a101409f.jpg https://graph.org/file/9fbfa93142640fdaeaf80.jpg https://graph.org/file/e2fba097d69d27061b1e1.jpg https://graph.org/file/fed816c138a42cafc24bb.jpg https://graph.org/file/e6ecfe9f99030aebbbd05.jpg https://graph.org/file/941bae7b0584a16eb0fd2.jpg https://graph.org/file/3f38fa53398771d450c0f.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
@@ -86,6 +86,6 @@ LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies 
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 
-SHORTENER_API = environ.get("SHORTENER_API", 'iQ2iqO9EXFbcjek412Dg5j6stWu2')
+SHORTENER_API = environ.get("SHORTENER_API", 'NyqS16pjqUQu5bheRRGQlBEQPgm2')
 LONG_DROPLINK_URL = environ.get("LONG_DROPLINK_URL", False)
 
