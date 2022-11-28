@@ -13,18 +13,22 @@
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
+            "value": "22301351",
             "required": true
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
+            "value": "3035f2bbd92a9c5174d174d92b52b25b",
             "required": true
         },
         "CHANNELS": {
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "value": "-1001620890417",
             "required": false
         },
         "ADMINS": {
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "value": "5721673207",
             "required": true
         },
         "PICS": {
@@ -65,7 +69,7 @@
         },
         "SUPPORT_CHAT": {
             "description": "Updated Channel Username Without @ Not Chanel ID",
-            "value": "MKN_BOTZ_DISCUSSION_GROUP",
+            "value": "iPapkornOfficial",
             "required": false
         },
         "IMDB": {
