@@ -295,11 +295,11 @@ async def advantage_spoll_choker(bot, query):
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
             k = (movie, files, offset, total_results)
-            await auto_filter(bot, query, k)
-        else:
-            k = await query.message.edit('Your Movies Not available in My Database.\n\nPlease Send Request Admin.\n\n<a href=http://t.me/Captain789bot>@Admin Rashi 💌')
-            await asyncio.sleep(9)
-            await k.delete()
+        await pm_AutoFilter(bot, query, k)
+    else:
+        k = await query.message.edit('This Movie Not Found In DataBase')
+        await asyncio.sleep(10)
+        await k.delete()
 
 
 @Client.on_callback_query(filters.regex(r"^pmspolling"))
@@ -317,9 +317,9 @@ async def pm_spoll_tester(bot, query):
         k = (movie, files, offset, total_results)
         await pm_AutoFilter(bot, query, k)
     else:
-        k = await query.message.edit('Your Movies Not available in My Database.\n\nPlease Send Request Admin.\n\n<a href=http://t.me/Captain789bot>@Admin Rashi 💌')
-            await asyncio.sleep(9)
-            await k.delete()
+        k = await query.message.edit('This Movie Not Found In DataBase')
+        await asyncio.sleep(10)
+        await k.delete()
 
 
 @Client.on_callback_query()
