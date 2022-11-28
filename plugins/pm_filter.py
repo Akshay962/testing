@@ -298,7 +298,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('Your Movies Not available in My Database.\n\nPlease Send Request Admin.\n\n<a href=http://t.me/Captain789bot>@Admin Rashi 💌')
-            await asyncio.sleep(30)
+            await asyncio.sleep(9)
             await k.delete()
 
 
@@ -318,7 +318,7 @@ async def pm_spoll_tester(bot, query):
         await pm_AutoFilter(bot, query, k)
     else:
         k = await query.message.edit('Your Movies Not available in My Database.\n\nPlease Send Request Admin.\n\n<a href=http://t.me/Captain789bot>@Admin Rashi 💌')
-            await asyncio.sleep(30)
+            await asyncio.sleep(9)
             await k.delete()
 
 
