@@ -1571,7 +1571,7 @@ async def pm_spoll_choker(msg):
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(60)
     await m.delete()
-
+    return
 async def advantage_spell_chok(msg):
     query = re.sub(
         r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
@@ -1626,7 +1626,7 @@ async def advantage_spell_chok(msg):
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(60)
     await m.delete()
-
+    return
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
