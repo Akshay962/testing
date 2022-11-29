@@ -297,7 +297,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
         await pm_AutoFilter(bot, query, k)
     else:
-        k = await query.message.edit('This Movie Not Found In DataBase')
+        k = await query.message.edit('𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬 𝐢𝐬\n𝐧𝐨𝐭 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞,\n𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬\n𝐰𝐢𝐥𝐥 𝐛𝐞 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝟏𝟐 𝐭𝐨 𝟐𝟒 𝐡𝐨𝐮𝐫𝐬.\n𝐨𝐫 𝐛𝐞𝐟𝐨𝐫𝐞 𝐭𝐡𝐚𝐭\n\n𝐌𝐞𝐬𝐬𝐚𝐠𝐞 : @iPapPrimeSPbot')
         await asyncio.sleep(10)
         await k.delete()
 
@@ -317,7 +317,7 @@ async def pm_spoll_tester(bot, query):
         k = (movie, files, offset, total_results)
         await pm_AutoFilter(bot, query, k)
     else:
-        k = await query.message.edit('This Movie Not Found In DataBase')
+        k = await query.message.edit('𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬 𝐢𝐬\n𝐧𝐨𝐭 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞,\n𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬\n𝐰𝐢𝐥𝐥 𝐛𝐞 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝟏𝟐 𝐭𝐨 𝟐𝟒 𝐡𝐨𝐮𝐫𝐬.\n𝐨𝐫 𝐛𝐞𝐟𝐨𝐫𝐞 𝐭𝐡𝐚𝐭\n\n𝐌𝐞𝐬𝐬𝐚𝐠𝐞 : @iPapPrimeSPbot')
         await asyncio.sleep(10)
         await k.delete()
 
@@ -1567,9 +1567,9 @@ async def pm_spoll_choker(msg):
     PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    m = await msg.reply_photo(photo="https://graph.org/file/8412b19e4cf0d6886435d.jpg", caption=f"𝐇𝐞𝐲 👋, {msg.from_user.mention}! \n\n𝐒𝐄𝐋𝐄𝐂𝐓 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄  👇👇👇",
+    m = await msg.reply_photo(photo="https://te.legra.ph/file/7dd82cffee9fe6671ac61.jpg", caption=f"𝐇𝐞𝐲 👋, {msg.from_user.mention}! \n\n𝐒𝐄𝐋𝐄𝐂𝐓 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄  👇👇👇",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(30)
+    await asyncio.sleep(60)
     await m.delete()
 
 async def advantage_spell_chok(msg):
@@ -1622,9 +1622,9 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply_photo(photo="https://graph.org/file/8412b19e4cf0d6886435d.jpg", caption=f"𝐇𝐞𝐲 👋, {msg.from_user.mention}! \n\n𝐒𝐄𝐋𝐄𝐂𝐓 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄  👇👇👇",
+    m = await msg.reply_photo(photo="https://te.legra.ph/file/7dd82cffee9fe6671ac61.jpg", caption=f"𝐇𝐞𝐲 👋, {msg.from_user.mention}! \n\n𝐒𝐄𝐋𝐄𝐂𝐓 𝐘𝐎𝐔𝐑 𝐌𝐎𝐕𝐈𝐄 𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 𝐌𝐎𝐕𝐈𝐄 𝐍𝐀𝐌𝐄  👇👇👇",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(30)
+    await asyncio.sleep(60)
     await m.delete()
 
 async def manual_filters(client, message, text=False):
