@@ -295,11 +295,11 @@ async def advantage_spoll_choker(bot, query):
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
         if files:
             k = (movie, files, offset, total_results)
-        await pm_AutoFilter(bot, query, k)
-    else:
-        k = await query.message.edit('𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬 𝐢𝐬\n𝐧𝐨𝐭 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝐦𝐲 𝐝𝐚𝐭𝐚𝐛𝐚𝐬𝐞,\n𝐘𝐨𝐮𝐫 𝐌𝐨𝐯𝐢𝐞𝐬 & 𝐖𝐞𝐛 𝐒𝐞𝐫𝐢𝐞𝐬\n𝐰𝐢𝐥𝐥 𝐛𝐞 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐢𝐧 𝟏𝟐 𝐭𝐨 𝟐𝟒 𝐡𝐨𝐮𝐫𝐬.\n𝐨𝐫 𝐛𝐞𝐟𝐨𝐫𝐞 𝐭𝐡𝐚𝐭\n\n𝐌𝐞𝐬𝐬𝐚𝐠𝐞 : @iPapPrimeSPbot')
-        await asyncio.sleep(10)
-        await k.delete()
+            await auto_filter(bot, query, k)
+        else:
+           kbb = await query.message.edit(text=(akshay.mntf), reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('💢 𝗿𝗲𝗾𝘂𝗲𝘀𝘁 💢', url=akshay.notfoun),]]),parse_mode=enums.ParseMode.HTML)                                                                                                                                            
+           await asyncio.sleep(12)
+           await kbb.delete()
 
 
 @Client.on_callback_query(filters.regex(r"^pmspolling"))
