@@ -1,5 +1,5 @@
 from aiohttp import web
-from plugins.akshay.extra import MNTFN
+from Script import MNTFN 
 routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
